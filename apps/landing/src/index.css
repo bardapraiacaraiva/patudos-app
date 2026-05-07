@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-amber: #F5A623;
+  --color-amber-glow: rgba(245,166,35,0.25);
+  --color-coral: #E8603C;
+  --color-dark: #0A0A14;
+  --color-dark-card: #111122;
+  --color-dark-surface: #16162E;
+  --color-glass: rgba(255,255,255,0.04);
+  --color-glass-border: rgba(255,255,255,0.07);
+  --color-text-main: #EAEAF2;
+  --color-text-muted: #7E7E9A;
+  --color-green: #34D399;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    background: var(--color-dark);
+    color: var(--color-text-main);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    margin: 0;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); }
+}
+
+.glass {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: blur(12px);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-amber), var(--color-coral));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, var(--color-amber), var(--color-coral));
+  transition: all 0.3s;
+}
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--color-amber-glow);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-dark); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+
+@keyframes scroll-strip {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-strip { animation: scroll-strip 35s linear infinite; }
