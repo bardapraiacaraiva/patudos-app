@@ -2,6 +2,7 @@ import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { PhotoStrip } from './components/PhotoStrip'
 import { Features } from './components/Features'
+import { Activities } from './components/Activities'
 import { Quiz } from './components/Quiz'
 import { Stats } from './components/Stats'
 import { CtaFinal } from './components/CtaFinal'
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <PhotoStrip />
       <Features />
+      <Activities />
       <Quiz />
       <Stats />
       <CtaFinal />
